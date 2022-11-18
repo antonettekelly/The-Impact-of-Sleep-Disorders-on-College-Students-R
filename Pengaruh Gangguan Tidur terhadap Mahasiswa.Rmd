@@ -1,0 +1,568 @@
+---
+title: "Pengaruh Gangguan Tidur terhadap Mahasiswa"
+author: "Kelly Mae"
+date: "2021"
+output:
+  pdf_document:
+    fig_caption: yes
+    fig_height: 4
+    fig_width: 5
+    keep_tex: yes
+    number_sections: yes
+    toc: yes
+    toc_depth: 3
+  html_document:
+    fig_caption: yes
+    keep_md: yes
+    number_sections: yes
+    toc: yes
+  word_document:
+    fig_caption: yes
+    toc: yes
+---
+
+***********       
+```{r,echo=FALSE}
+library(readxl)
+IS240D_00000051428_KellyMae_D1_Data <- read_excel("Dataset.xlsx")
+str(IS240D_00000051428_KellyMae_D1_Data)
+```
+
+# Pendahuluan
+
+Topik yang kami teliti adalah mengenai pengaruh gangguan tidur terhadap mahasiswa. Alasan kami memilih untuk meneliti masalah ini adalah karena hal ini cukup dekat dan berhubungan erat dengan kehidupan kami. Kami sebagai mahasiswa sudah merasakan sendiri bagaimana tuntutan dunia perkuliahan yang menuntut setiap dari kami untuk terus produktif dan melakukan kegiatan kami dengan maksimal agar dapat tercapai segala tujuan kami, tetapi hal itu tidak bisa kami gapai apabila kekurangan istirahat atau tidur yang sudah menjadi kebutuhan yang tidak bisa terlepas dari kehidupan kita. Maka dari itu, kami sebagai pihak yang merasakan langsung, ingin mengetahui bagaimana orang lain dan ingin mengambil data pasti mengenai bagaimana gangguan tidur berdampak kepada kehidupan mahasiswa.
+
+# Desain Penelitian dan Hipotesa
+
+Penelitian yang kami lakukan menggunakan metode pengumpulan data berupa google form atau kuisioner online. Pertanyaan-pertanyaan yang kami buat di dalam kuisioner ini pun dibuat berdasarkan hipotesa-hipotesa yang ingin kami buktikan di dalam penelitian yang akan kami kembangkan, yaitu tentang mengenai hubungan kuantitas dan kualitas tidur terhadap produktivitas para mahasiswa dalam mengikuti kegiatan perkuliahan. Hasil dari kuisioner yang telah kita berikan, akan kita teliti lebih lanjut dan kita kelola. Setelah itu kita dapat mencari jawaban permasalahan-permasalahan yang ada dan memberikan solusi yang dapat mengatasi permasalahan tersebut.
+
+## Tipe data  
+
+* Nama Lengkap:
+  + tipe data = Kategorikal
+  + level of measurement = Nominal
+  
+* Frekuensi Gangguan Tidur:
+  + tipe data = Kategorikal
+  + level of measurement = Ratio
+  
+* Durasi Tidur:
+  + tipe data = Kategorikal
+  + level of measurement = Ratio
+  
+* Skala IPK:
+  + tipe data = Numerikal
+  + level of measurement = Ratio
+  
+* Frekuensi Telat:
+  + tipe data = Kategorikal
+  + level of measurement = Ratio
+  
+* Frekuensi Gangguan Mengantuk:
+  + tipe data = Kategorikal
+  + level of measurement = Ratio
+  
+* Pola Pikir Mahasiswa:
+  + tipe data = Kategorikal
+  + level of measurement = Nominal
+
+* Jam Tidur:
+  + tipe data = Kategorikal
+  + level of measurement = Nominal
+  
+* Frekuensi Terserang Penyakit:
+  + tipe data = Kategorikal
+  + level of measurement = Ratio
+  
+## Metode Pengumpulan Data / Metode Sampling
+
+Target responden yang kami ingin capai dari penyebaran kuisioner sudah terpenuhi oleh responden dengan status mahasiswa dan pekerja yang didapat dengan total sebanyak 200 orang.
+
+Alat yang digunakan dalam pengumpulan data yaitu Google Form dengan isi jawaban singkat dan pilihan ganda.
+
+Prosedur:
+* Menentukan target populasi pada penelitian kali ini yaitu mahasiswa.
+* Mendaftar seluruh elemen unit populasi yaitu pada penelitian kali ini elemen dari mahasiswa adalah nama lengkap, dan gangguan tidur.
+* Menentukan sumber informasi karena populasi kita hanya mahasiswa, maka pengambilan sumber informasinya dilakukan secara simple random sampling karena tiap sample sudah mengkategorikan mahasiswa.
+* Menentukan jumlah anggota sampel.
+
+Variabel:
+* Independent Variable: Nama Lengkap, Skala IPK, Pola Pikir Mahasiswa.
+* Dependent Variable: Frekuensi Gangguan Tidur, Durasi Tidur, Frekuensi Telat, Frekuensi Mengantuk, Jam Tidur, Frekuensi Terserang Penyakit.
+
+Metode Sampling yang digunakan adalah metode Simple Random Sampling.
+
+## Hipotesa
+
+$H_0:$ Tidak terdapat hubungan antara mahasiswa yang memiliki gangguan tidur dengan nilai IPK yang lebih rendah.
+$H_1:$ Terdapat hubungan antara mahasiswa yang memiliki gangguan tidur dengan nilai IPK yang lebih rendah.
+
+$H_0:$ Tidak terdapat hubungan antara gangguan tidur terhadap durasi tidur yang dialami mahasiswa.
+$H_1:$ Terdapat hubungan antara gangguan tidur terhadap durasi tidur yang dialami mahasiswa.
+
+$H_0:$ Tidak terdapat hubungan antara gangguan tidur dengan aktivitas mahasiswa dalam perkuliahan.
+$H_1:$ Terdapat hubungan antara gangguan tidur dengan aktivitas mahasiswa dalam perkuliahan.
+
+$H_0:$ Tidak terdapat hubungan antara mahasiswa yang menganggap bahwa tidur itu penting dengan memiliki gangguan tidur yang lebih rendah.
+$H_1:$ Terdapat hubungan antara mahasiswa yang menganggap bahwa tidur itu penting dengan memiliki gangguan tidur yang lebih rendah.
+
+$H_0:$ Tidak terdapat hubungan antara mahasiswa yang memiliki gangguan tidur dengan memiliki jam yang tidur lebih lama atau larut malam.
+$H_1:$ Terdapat hubungan antara mahasiswa yang memiliki gangguan tidur dengan memiliki jam yang tidur lebih lama atau larut malam.
+
+$H_0:$ Tidak terdapat hubungan antara mahasiswa yang memiliki gangguan tidur dengan cenderung lebih sering terserang penyakit.
+$H_1:$ Terdapat hubungan antara mahasiswa yang memiliki gangguan tidur dengan cenderung lebih sering terserang penyakit.
+
+# Dasar Teori
+
+Hipotesa kami terdiri dari hipotesa 2 variabel numerikal, hipotesa 2 variabel kategorikal, dan hipotesa 1 variabel nominal independen.
+
+## Hipotesa 2 Variabel Numerikal
+Uji hipotesa untuk 2 variabel numerikal akan diuji dengan menggunakan uji independensi Wilcoxon Matched Pairs Signed Rank Test dengan statistik tes.
+
+\begin{align*}
+\mu_T = \frac{(n)(n + 1)}{4} 
+\end{align*}
+
+\begin{align*}
+\sigma_T = \sqrt{\frac{(n)(n + 1)(2n+1)}{24}} 
+\end{align*}
+
+\begin{align*}
+z = \frac{T - \mu_T}{\sigma_T}
+\end{align*}
+
+H0: Tidak terdapat perbedaan yang signifikan antara 2 variabel independen.   
+Ha: Terdapat perbedaan yang signifikan antara 2 variabel independen.   
+
+Hipotesa null akan ditolak pada tingkat signifikansi α bila z < α.    
+Maka dapat disimpulkan terdapat perbedaan yang signifikan antara kedua variabel tersebut.
+
+## Hipotesa 2 Variabel Kategorikal
+Uji hipotesa untuk 2 variabel kategorikal akan diuji dengan menggunakan uji independensi Chi-Square Independence in a 2-Way Contingency Table dengan statistik tes.   
+
+\begin{equation}
+{x^2} = \sum_{i}\sum_{j}\frac{(x_i_j - e_i_j)^2}{e_i}
+\end{equation}     
+   
+H0: Tidak terdapat hubungan antara 2 variabel independen.   
+Ha: Terdapat hubungan antara 2 variabel independen.
+
+Hipotesa null akan ditolak pada tingkat signifikansi α bila χ2 > χ2α,df. Maka dapat disimpulkan terdapat hubungan antara kedua variabel tersebut.
+
+
+# Analisa Data   
+
+## Statistika Deskriptif
+
+```{r,echo=FALSE}
+library(moments)
+summary(IS240D_00000051428_KellyMae_D1_Data)
+
+sd(IS240D_00000051428_KellyMae_D1_Data$Skala_ipk)
+(cv <- sd(IS240D_00000051428_KellyMae_D1_Data$Skala_ipk) / mean(IS240D_00000051428_KellyMae_D1_Data$Skala_ipk))
+
+skewness(IS240D_00000051428_KellyMae_D1_Data$Skala_ipk)
+kurtosis(IS240D_00000051428_KellyMae_D1_Data$Skala_ipk)
+
+qqnorm(IS240D_00000051428_KellyMae_D1_Data$Skala_ipk, pch = 1)
+
+#qqline(IS240D_00000051428_KellyMae_D1_Data$Skala_ipk)
+#qqplot(IS240D_00000051428_KellyMae_D1_Data$Skala_ipk)
+
+shapiro.test(IS240D_00000051428_KellyMae_D1_Data$Skala_ipk)
+
+#Kesimpulan : 
+#sd = 0.2889669
+#cv = 0.08285653
+#Nilai skewness lebih kecil dari nilai nol sehingga bernilai negatif dan jauh dari nlilai sehingga data berdistribusi tidak normal (sk = -1.456438).
+#Nilai kurtosis lebih besar dai nilai nol sehingga bernilai positif dan cukup jauh dari nilai 0 sehingga datanya cenderung runcing atau cenderung homogen (ku = 7.196571).
+#Variabel Skala_ipk tidak mengikuti Distribusi Gaussian (p-value = 7.351e-11).
+```
+## Tabel Frekuensi (Statistika Deskriptif Teknik Numerikal)
+
+### Distribusi berdasarkan Frekuensi Gangguan Tidur
+```{r,echo=FALSE}
+frekuensi_gangguan <- table(IS240D_00000051428_KellyMae_D1_Data$Frekuensi_gangguan_tidur)
+barplot(frekuensi_gangguan, main = "Distribusi berdasarkan Frekuensi Gangguan Tidur", col = rainbow(5))
+
+# Kesimpulan: 
+# Berdasarkan diagram batang di atas, frekuensi yang paling tinggi adalah “1-3 kali”, sedangkan frekuensi paling rendah adalah “0 kali”. Kesimpulan yang dapat diambil adalah sebagian besar mahasiswa mengalami gangguan tidur sebanyak 1-3 kali daripada dengan mahasiswa lainnya yang memiliki gangguan tidur sebanyak 4 - 6 kali bahkan sampai > 10 kali.
+```
+
+### Distribusi berdasarkan Durasi Tidur
+```{r,echo=FALSE}
+durasi <- table(IS240D_00000051428_KellyMae_D1_Data$Durasi_tidur)
+barplot(durasi, main = "Distribusi berdasarkan Durasi Tidur", col = rainbow(5))
+
+# Kesimpulan: 
+# Berdasarkan diagram batang di atas, terlihat bahwa data dengan frekuensi tertinggi adalah “5-6 jam”, sedangkan data yang mendapatkan frekuensi terendah “1-2 jam”. Kesimpulan yang dapat diambil adalah bahwa rata-rata mahasiswa tidur selama 5-6 jam per hari. Terdapat beberapa mahasiswa yang tidur selama 1-2 jam per hari.
+```
+
+### Distribusi berdasarkan Frekuensi Telat
+```{r,echo=FALSE}
+telat <- table(IS240D_00000051428_KellyMae_D1_Data$Frekuensi_telat)
+barplot(telat, main = "Distribusi berdasarkan Frekuensi Telat", col = rainbow(9))
+
+# Kesimpulan: 
+# Berdasarkan diagram batang di atas, frekuensi tertinggi yang didapatkan adalah "3 kali", sedangkan frekuensi yang paling rendah yang didapatkan adalah "8 kali" dan "9 kali” dengan jumlah data yang sama, yaitu di bawah 10 orang. Kesimpulan yang dapat diambil adalah sebagian mahasiswa jarang telat dimana frekuensi telat tersebut masih berada pada level yang normal, dan hanya sedikit mahasiswa yang sering telat dalam melakukan kegiatan perkuliahan.
+```
+
+### Distribusi berdasarkan Gangguan Mengantuk
+```{r,echo=FALSE}
+gangguan_mengantuk <- table(IS240D_00000051428_KellyMae_D1_Data$Frekuensi_gangguan_mengantuk)
+barplot(gangguan_mengantuk, main = "Distribusi berdasarkan Gangguan Mengantuk", col = rainbow(5))
+
+# Kesimpulan: 
+# Berdasarkan diagram batang di atas, frekuensi yang paling tinggi adalah “1-3 kali”, sedangkan frekuensi paling rendah adalah “7–9 kali”. Kesimpulan yang dapat diambil adalah sebagian besar mahasiswa memiliki frekuensi mengantuk yang relatif sedikit, sedangkan sisanya sering mengantuk pada saat melakukan kegiatan perkuliahannya. 
+```
+
+### Distribusi berdasarkan Pola Pikir Mahasiswa
+```{r,echo=FALSE}
+pikiran_mahasiswa <- table(IS240D_00000051428_KellyMae_D1_Data$Pola_pikir_mahasiswa)
+barplot(pikiran_mahasiswa, main = "Distribusi berdasarkan Pola Pikir Mahasiswa", col = rainbow(2))
+
+# Kesimpulan: 
+# Berdasarkan diagram batang di atas, frekuensi tertinggi adalah “Ya”, sedangkan yang terendah adalah “Tidak”. Kesimpulan yang dapat diambil adalah seluruh mahasiswa memiliki pendapat yang sama bahwa mahasiswa perlu menjaga pola tidurnya karena memegang peran penting dalam menjaga kesehatan tubuh. Terdapat sangat sedikit mahasiswa yang berpikir bahwa pola tidur tidak memegang peranan penting bagi kesehatan tubuh.
+```
+
+### Distibusi berdasarkan Jam Tidur
+```{r,echo=FALSE}
+jam <- table(IS240D_00000051428_KellyMae_D1_Data$Jam_tidur)
+barplot(jam, main = "Distibusi berdasarkan Jam Tidur", col = rainbow(5))
+
+# Kesimpulan: 
+# Berdasarkan diagram batang di atas, frekuensi yang paling tinggi adalah “> 23.59”. Sedangkan frekuensi yang paling rendah adalah “20.00-21.00”. Kesimpulan yang dapat diambil adalah sebagian besar mahasiswa yang tidur di atas jam 23.59 akan mengalami gangguan tidur, sedangkan hanya mahasiswa yang tidur pada jam 20.00-21.00 tidak terkena gangguan tidur.
+```
+
+### Distibusi berdasarkan Frekuensi Terserang Penyakit
+```{r,echo=FALSE}
+penyakit <- table(IS240D_00000051428_KellyMae_D1_Data$Frekuensi_terserang_penyakit)
+barplot(penyakit, main = "Distibusi berdasarkan Frekuensi Terserang Penyakit", col = rainbow(5))
+
+# Kesimpulan: 
+# Berdasarkan diagram batang, di atas, frekuensi yang paling tinggi adalah “1–3 kali” dan frekuensi terendah adalah “7–9 kali”. Kesimpulan yang dapat diambil adalah sebagian besar mahasiswa yang memiliki gangguan tidur cenderung terkena penyakit sebanyak 1-3 kali, sedangkan sisa mahasiswa yang tidak memiliki gangguan tidur cenderung jarang atau tidak pernah terserang penyakit.
+```
+
+# Tabel Frekuensi (Statistika Deskriptif Teknik Numerik)
+##Distribusi berdasarkan Frekuensi Gangguan Tidur
+```{r,echo=FALSE}
+(myTable <- table(IS240D_00000051428_KellyMae_D1_Data$Frekuensi_gangguan_tidur))
+```
+
+## Distribusi berdasarkan Durasi Tidur
+```{r,echo=FALSE}
+(myTable <- table(IS240D_00000051428_KellyMae_D1_Data$Durasi_tidur))
+```
+
+## Distribusi berdasarkan Frekuensi Telat
+```{r,echo=FALSE}
+(myTable <- table(IS240D_00000051428_KellyMae_D1_Data$Frekuensi_telat))
+```
+
+## Distribusi berdasarkan Gangguan Mengantuk
+```{r,echo=FALSE}
+(myTable <- table(IS240D_00000051428_KellyMae_D1_Data$Frekuensi_gangguan_mengantuk))
+```
+
+## Distribusi berdasarkan Pola Pikir Mahasiswa
+```{r,echo=FALSE}
+(myTable <- table(IS240D_00000051428_KellyMae_D1_Data$Pola_pikir_mahasiswa))
+```
+
+## Distibusi berdasarkan Jam Tidur
+```{r,echo=FALSE}
+(myTable <- table(IS240D_00000051428_KellyMae_D1_Data$Jam_tidur))
+```
+
+## Distribusi berdasarkan Frekuensi Terserang Penyakit
+```{r,echo=FALSE}
+(myTable <- table(IS240D_00000051428_KellyMae_D1_Data$Frekuensi_terserang_penyakit))
+```
+
+#Tabulasi Data
+## Tabulasi Data 1
+```{r,echo=FALSE}
+table(IS240D_00000051428_KellyMae_D1_Data$Skala_ipk, IS240D_00000051428_KellyMae_D1_Data$Frekuensi_gangguan_tidur)
+```
+
+## Tabulasi Data 2
+```{r,echo=FALSE}
+table(IS240D_00000051428_KellyMae_D1_Data$Durasi_tidur, IS240D_00000051428_KellyMae_D1_Data$Frekuensi_gangguan_tidur)
+```
+
+## Tabulasi Data 3
+```{r,echo=FALSE}
+table(IS240D_00000051428_KellyMae_D1_Data$Frekuensi_telat, IS240D_00000051428_KellyMae_D1_Data$Frekuensi_gangguan_tidur)
+```
+
+## Tabulasi Data 4
+```{r,echo=FALSE}
+table(IS240D_00000051428_KellyMae_D1_Data$Frekuensi_gangguan_mengantuk, IS240D_00000051428_KellyMae_D1_Data$Frekuensi_gangguan_mengantuk)
+```
+
+## Tabulasi Data 5
+```{r,echo=FALSE}
+table(IS240D_00000051428_KellyMae_D1_Data$Pola_pikir_mahasiswa, IS240D_00000051428_KellyMae_D1_Data$Frekuensi_gangguan_tidur)
+```
+
+## Tabulasi Data 6
+```{r,echo=FALSE}
+table(IS240D_00000051428_KellyMae_D1_Data$Jam_tidur, IS240D_00000051428_KellyMae_D1_Data$Frekuensi_gangguan_tidur)
+```
+
+## Tabulasi Data 7
+```{r,echo=FALSE}
+table(IS240D_00000051428_KellyMae_D1_Data$Frekuensi_terserang_penyakit, IS240D_00000051428_KellyMae_D1_Data$Frekuensi_gangguan_tidur)
+```
+
+
+
+## Hasil Uji Hipotesa
+
+### Test Hipotesa 1
+```{r, echo=TRUE}
+IS240D_00000051428_KellyMae_D1_Data$Gangguan <- IS240D_00000051428_KellyMae_D1_Data$Frekuensi_gangguan_tidur
+IS240D_00000051428_KellyMae_D1_Data$Gangguan[IS240D_00000051428_KellyMae_D1_Data$Gangguan == "0 kali"] <- "Tidak"
+IS240D_00000051428_KellyMae_D1_Data$Gangguan[IS240D_00000051428_KellyMae_D1_Data$Gangguan == "1 - 3 kali"] <- "Tidak"
+IS240D_00000051428_KellyMae_D1_Data$Gangguan[IS240D_00000051428_KellyMae_D1_Data$Gangguan == "4 - 6 kali"] <- "Ya"
+IS240D_00000051428_KellyMae_D1_Data$Gangguan[IS240D_00000051428_KellyMae_D1_Data$Gangguan == "7 - 9 kali"] <- "Ya"
+IS240D_00000051428_KellyMae_D1_Data$Gangguan[IS240D_00000051428_KellyMae_D1_Data$Gangguan == "> 10 kali"] <- "Ya"
+str(IS240D_00000051428_KellyMae_D1_Data$Gangguan)
+
+(wt1 <- wilcox.test(IS240D_00000051428_KellyMae_D1_Data$Skala_ipk[IS240D_00000051428_KellyMae_D1_Data$Gangguan == "Ya"], IS240D_00000051428_KellyMae_D1_Data$Skala_ipk[IS240D_00000051428_KellyMae_D1_Data$Gangguan == "Tidak"], paired = FALSE, alternative = "less"))
+
+# Hipotesa null (H0) ditolak pada tingkat signifikan 5% karena p-value < α (α = 0.05). Maka, terdapat bukti yang cukup untuk menyatakan bahwa terdapat hubungan antara mahasiswa yang memiliki gangguan tidur dengan nilai IPK yang lebih rendah. 
+
+#(wt1_2 <- wilcox.test(IS240D_00000051428_KellyMae_D1_Data$Skala_ipk ~ IS240D_00000051428_KellyMae_D1_Data$Gangguan, paired = FALSE, alternative = "less"))
+```
+
+### Test Hipotesa 2
+```{r, echo=TRUE}
+IS240D_00000051428_KellyMae_D1_Data$Durasi <- IS240D_00000051428_KellyMae_D1_Data$Durasi_tidur
+IS240D_00000051428_KellyMae_D1_Data$Durasi[IS240D_00000051428_KellyMae_D1_Data$Durasi == "1 - 2 jam"] <- "1.5"
+IS240D_00000051428_KellyMae_D1_Data$Durasi[IS240D_00000051428_KellyMae_D1_Data$Durasi == "3 - 4 jam"] <- "3.5"
+IS240D_00000051428_KellyMae_D1_Data$Durasi[IS240D_00000051428_KellyMae_D1_Data$Durasi == "5 - 6 jam"] <- "5.5"
+IS240D_00000051428_KellyMae_D1_Data$Durasi[IS240D_00000051428_KellyMae_D1_Data$Durasi == "7 - 8 jam"] <- "7.5"
+IS240D_00000051428_KellyMae_D1_Data$Durasi[IS240D_00000051428_KellyMae_D1_Data$Durasi == "> 8 jam"] <- "8.5"
+IS240D_00000051428_KellyMae_D1_Data$Durasi <- as.numeric(IS240D_00000051428_KellyMae_D1_Data$Durasi)
+str(IS240D_00000051428_KellyMae_D1_Data$Durasi)
+
+(wt2 <- wilcox.test(IS240D_00000051428_KellyMae_D1_Data$Durasi[IS240D_00000051428_KellyMae_D1_Data$Gangguan == "Tidak"], (IS240D_00000051428_KellyMae_D1_Data$Durasi[IS240D_00000051428_KellyMae_D1_Data$Gangguan == "Ya"])))
+
+# Hipotesa null (H0) ditolak pada tingkat signifikan 5% karena p-value < α (α = 0.05). Maka, terdapat hubungan antara gangguan tidur teratur terhadap durasi tidur yang dialami mahasiswa.
+```
+
+### Test Hipotesa 3
+```{r, echo=TRUE}
+IS240D_00000051428_KellyMae_D1_Data$Telat <- IS240D_00000051428_KellyMae_D1_Data$Frekuensi_telat
+IS240D_00000051428_KellyMae_D1_Data$Telat[IS240D_00000051428_KellyMae_D1_Data$Telat == "0 kali"] <- "0"
+IS240D_00000051428_KellyMae_D1_Data$Telat[IS240D_00000051428_KellyMae_D1_Data$Telat == "1 kali"] <- "1"
+IS240D_00000051428_KellyMae_D1_Data$Telat[IS240D_00000051428_KellyMae_D1_Data$Telat == "2 kali"] <- "2"
+IS240D_00000051428_KellyMae_D1_Data$Telat[IS240D_00000051428_KellyMae_D1_Data$Telat == "3 kali"] <- "3"
+IS240D_00000051428_KellyMae_D1_Data$Telat[IS240D_00000051428_KellyMae_D1_Data$Telat == "4 kali"] <- "4"
+IS240D_00000051428_KellyMae_D1_Data$Telat[IS240D_00000051428_KellyMae_D1_Data$Telat == "5 kali"] <- "5"
+IS240D_00000051428_KellyMae_D1_Data$Telat[IS240D_00000051428_KellyMae_D1_Data$Telat == "6 kali"] <- "6"
+IS240D_00000051428_KellyMae_D1_Data$Telat[IS240D_00000051428_KellyMae_D1_Data$Telat == "7 kali"] <- "7"
+IS240D_00000051428_KellyMae_D1_Data$Telat[IS240D_00000051428_KellyMae_D1_Data$Telat == "8 kali"] <- "8"
+IS240D_00000051428_KellyMae_D1_Data$Telat[IS240D_00000051428_KellyMae_D1_Data$Telat == "9 kali"] <- "9"
+IS240D_00000051428_KellyMae_D1_Data$Telat <- as.numeric(IS240D_00000051428_KellyMae_D1_Data$Telat)
+str(IS240D_00000051428_KellyMae_D1_Data$Telat)
+
+(wt3 <- wilcox.test(IS240D_00000051428_KellyMae_D1_Data$Telat[IS240D_00000051428_KellyMae_D1_Data$Gangguan == "Tidak"], (IS240D_00000051428_KellyMae_D1_Data$Telat[IS240D_00000051428_KellyMae_D1_Data$Gangguan == "Ya"])))
+
+# Hipotesa null (H0) ditolak pada tingkat signifikan 5% karena p-value < α (α = 0.05). Maka, terdapat bukti yang cukup untuk menyatakan bahwa terdapat hubungan antara gangguan tidur dengan terganggunya aktivitas mahasiswa dalam perkuliahan yaitu telat.
+
+IS240D_00000051428_KellyMae_D1_Data$Mengantuk <- IS240D_00000051428_KellyMae_D1_Data$Frekuensi_gangguan_mengantuk
+IS240D_00000051428_KellyMae_D1_Data$Mengantuk[IS240D_00000051428_KellyMae_D1_Data$Mengantuk == "0 kali"] <- "0"
+IS240D_00000051428_KellyMae_D1_Data$Mengantuk[IS240D_00000051428_KellyMae_D1_Data$Mengantuk == "1 - 3 kali"] <- "2"
+IS240D_00000051428_KellyMae_D1_Data$Mengantuk[IS240D_00000051428_KellyMae_D1_Data$Mengantuk == "4 - 6 kali"] <- "5"
+IS240D_00000051428_KellyMae_D1_Data$Mengantuk[IS240D_00000051428_KellyMae_D1_Data$Mengantuk == "7 - 9 kali"] <- "8"
+IS240D_00000051428_KellyMae_D1_Data$Mengantuk[IS240D_00000051428_KellyMae_D1_Data$Mengantuk == "> 10 kali"] <- "11"
+IS240D_00000051428_KellyMae_D1_Data$Mengantuk <- as.numeric(IS240D_00000051428_KellyMae_D1_Data$Mengantuk)
+str(IS240D_00000051428_KellyMae_D1_Data$Mengantuk)
+
+(wt4 <- wilcox.test(IS240D_00000051428_KellyMae_D1_Data$Mengantuk[IS240D_00000051428_KellyMae_D1_Data$Gangguan == "Tidak"], (IS240D_00000051428_KellyMae_D1_Data$Mengantuk[IS240D_00000051428_KellyMae_D1_Data$Gangguan == "Ya"])))
+
+# Hipotesa null (H0) ditolak pada tingkat signifikan 5% karena p-value < α (α = 0.05). Maka, terdapat bukti yang cukup untuk menyatakan bahwa terdapat hubungan antara mengantuk sebagai perwakilan aktivitas mahasiswa dengan gangguan tidur mahasiswa. 
+```
+
+### Test Hipotesa 4
+```{r, echo=TRUE}
+tab <- table(IS240D_00000051428_KellyMae_D1_Data$Pola_pikir_mahasiswa, IS240D_00000051428_KellyMae_D1_Data$Gangguan)
+
+(ct <- chisq.test(tab, correct = FALSE))
+
+# Hipotesa null (H0) tidak ditolak pada tingkat signifikan 5% karena p-value > α (α = 0.05). Maka, tidak terdapat bukti yang cukup untuk menyatakan bahwa terdapat hubungan antara mahasiswa yang menganggap bahwa tidur itu penting dengan memiliki gangguan tidur yang lebih rendah.
+```
+
+### Test Hipotesa 5
+```{r, echo=TRUE}
+IS240D_00000051428_KellyMae_D1_Data$Jam <- IS240D_00000051428_KellyMae_D1_Data$Jam_tidur
+IS240D_00000051428_KellyMae_D1_Data$Jam[IS240D_00000051428_KellyMae_D1_Data$Jam == "20.00 - 21.00"]  <- "8.30"
+IS240D_00000051428_KellyMae_D1_Data$Jam[IS240D_00000051428_KellyMae_D1_Data$Jam == "21.00 - 22.00"]  <- "9.30"
+IS240D_00000051428_KellyMae_D1_Data$Jam[IS240D_00000051428_KellyMae_D1_Data$Jam == "22.00 - 23.00"]  <- "10.30"
+IS240D_00000051428_KellyMae_D1_Data$Jam[IS240D_00000051428_KellyMae_D1_Data$Jam == "23.00 - 23.59"]  <- "11.30"
+IS240D_00000051428_KellyMae_D1_Data$Jam[IS240D_00000051428_KellyMae_D1_Data$Jam == "> 23.59"]  <- "12.30"
+IS240D_00000051428_KellyMae_D1_Data$Jam <- as.numeric(IS240D_00000051428_KellyMae_D1_Data$Jam)
+str(IS240D_00000051428_KellyMae_D1_Data$Jam)
+
+(wt5 <- wilcox.test(IS240D_00000051428_KellyMae_D1_Data$Jam[IS240D_00000051428_KellyMae_D1_Data$Gangguan == "Tidak"], (IS240D_00000051428_KellyMae_D1_Data$Jam[IS240D_00000051428_KellyMae_D1_Data$Gangguan == "Ya"])))
+
+#tab1 <- table(IS240D_00000051428_KellyMae_D1_Data$Jam_tidur, IS240D_00000051428_KellyMae_D1_Data$Gangguan)
+#(ct1 <- chisq.test(tab, correct = FALSE))
+
+# Hipotesa null (H0) ditolak pada tingkat signifikan 5% karena p-value < α (α = 0.05). Maka, terdapat hubungan antara mahasiswa yang memiliki gangguan tidur dengan memiliki jam yang tidur lebih lama atau larut malam. 
+```
+
+### Test Hipotesa 6
+```{r, echo=TRUE}
+IS240D_00000051428_KellyMae_D1_Data$Sakit <- IS240D_00000051428_KellyMae_D1_Data$Frekuensi_terserang_penyakit
+IS240D_00000051428_KellyMae_D1_Data$Sakit[IS240D_00000051428_KellyMae_D1_Data$Sakit == "0 kali"] <- "0"
+IS240D_00000051428_KellyMae_D1_Data$Sakit[IS240D_00000051428_KellyMae_D1_Data$Sakit == "1 - 3 kali"] <- "2"
+IS240D_00000051428_KellyMae_D1_Data$Sakit[IS240D_00000051428_KellyMae_D1_Data$Sakit == "4 - 6 kali"] <- "5"
+IS240D_00000051428_KellyMae_D1_Data$Sakit[IS240D_00000051428_KellyMae_D1_Data$Sakit == "7 - 9 kali"] <- "8"
+IS240D_00000051428_KellyMae_D1_Data$Sakit[IS240D_00000051428_KellyMae_D1_Data$Sakit == "> 10 kali"] <- "11"
+IS240D_00000051428_KellyMae_D1_Data$Sakit <- as.numeric(IS240D_00000051428_KellyMae_D1_Data$Sakit)
+str(IS240D_00000051428_KellyMae_D1_Data$Sakit)
+
+(wt6 <- wilcox.test(IS240D_00000051428_KellyMae_D1_Data$Sakit[IS240D_00000051428_KellyMae_D1_Data$Gangguan == "Tidak"], (IS240D_00000051428_KellyMae_D1_Data$Sakit[IS240D_00000051428_KellyMae_D1_Data$Gangguan == "Ya"])))
+
+# Hipotesa null (H0) ditolak pada tingkat signifikan 5% karena p-value < α (α = 0.05). Maka, terdapat hubungan antara mahasiswa yang memiliki gangguan tidur dengan cenderung lebih sering terserang penyakit.
+```
+
+
+
+# Ringkasan dan Kesimpulan     
+Berdasarkan hasil penelitian mengenai topik “Pengaruh Gangguan Tidur pada Mahasiswa,” maka dapat menghasilkan suatu kesimpulan bahwa terdapat hubungan antara frekuensi gangguan tidur terhadap skala IPK yang dimiliki oleh mahasiswa, serta terdapat hubungan antara frekuensi gangguan tidur terhadap aktivitas mahasiswa, yaitu frekuensi telat dan frekuensi mengantuk. Sedangkan, terdapat hubungan antara frekuensi gangguan tidur terhadap durasi tidur, dan tidak terdapat hubungan antara mahasiswa yang menganggap bahwa tidur itu penting dengan memiliki gangguan tidur yang lebih rendah. Terakhir, terdapat pula kesimpulan bahwa frekuensi gangguan tidur berpengaruh pada jam tidur serta keseringan para mahasiswa terkena penyakit pada saat menjalani kegiatan perkuliahan.
+
+Penelitian ini diharapkan dapat menambah wawasan tidak hanya bagi para mahasiswa, namun untuk semua masyarakat untuk mengetahui akan pentingnya tidur bagi kehidupan manusia. Masih terdapat banyak hal yang dapat diteliti mengenai cara mengatasi gangguan tidur. Penelitian di masa yang mendatang diharapkan dapat meneliti lebih mendalam mengenai faktor-faktor lain mengenai gangguan tidur yang dapat berpengaruh terhadap para mahasiswa dalam menjalani kegiatan perkuliahannya.
+
+
+
+# Daftar Pustaka
+
+* J. Sarfriyanda, D. Karim, and A.P. Dewi, “Hubungan antara Kualitas Tidur Dan Kualitas Tidur dengan Prestasi Belajar Mahasiswa.” Jurnal Online Mahasiswa Program Studi Ilmu Keperawatan Universitas Riau, vol. 2, no. 2, p. 1178 - 1185, October, 2016. [Online Serial]. 
+Available: https://www.neliti.com/publications/185714/hubungan-antara-kualitas-tidur-dan-kuantitas-tidur-dengan-prestasi-belajar-mahas. [Accessed Mar. 21, 2020].
+* A. Suseno, A. Sulianti, and A. Verina, “Prokrastinasi dan Pola Tidur Mahasiswa.” Jurnal Penelitian Psikologi, vol. 11, no. 2, October, 2020. [Online Serial]. Available: Prokrastinasi dan Pola Tidur Mahasiswa | Jurnal Penelitian Psikologi (uinsby.ac.id). [Accessed Mar. 21, 2020].
+* M. Walker, “Why We Sleep: Unlocking the Power of Sleep and Dreams.” Simon and Schuster, October, 2017. [Book]. Available: Why We Sleep: Unlocking the Power of Sleep and Dreams - Matthew Walker - Google Books. [Accessed Mar. 21, 2020].
+* A. Huffington, “The Sleep Revolution: Transforming Your Life, One Night at a Time.” Harmony/Rodale, April, 2016. [Book]. Available: The Sleep Revolution: Transforming Your Life, One Night at a Time - Arianna Huffington - Google Books. [Accessed Mar. 21, 2020].
+* H. Nilifda, Nadjimir, and Hardisman, “Hubungan Kualitas Tidur dengan Prestasi Akademik Mahasiswa Program Studi Pendidikan Dokter Angkatan 2010 FK Universitas Andalas.” Jural Kesehatan Andalas, vol. 5, no. 1, 2016 [Online Seril]. Available: Hubungan Kualitas Tidur dengan Prestasi Akademik Mahasiswa Program Studi Pendidikan Dokter Angkatan 2010 FK Universitas Andalas | Nilifda | Jurnal Kesehatan Andalas (unand.ac.id). [Accessed Mar. 22, 2020].
+* S. Hershner, “Sleep and Academic Performance: Measuring the Impac of Sleep.” Current Opinion in Behavioral Sciences, ol. 33, p. 51 - 56, June, 2020. 
+* W. Chen, and J. Chen, “Consequences of Inadequate Sleep during the College Years: Sleep Deprivation, Grade Point Average, and College Graduation.” Preventive Medicine, vol. 124, p. 23 – 28, 2019.
+* N. L. Shankar, and C. L. Park, “Effects of Stress on Students’ Physical and Mental Health and Academic Success.” International Journal of School and Educational Psychology, vol. 4, p. 5 – 9, February, 2016.
+* T. O. Ratnaningtyas, and D. Fitriani, “Hubungan Stres dengan Kualitas Tidur pada Mahasiswa Tingkat Akhir.” Edu Masda Journal, vol. 3, no. 2, p. 181 – 191, September, 2019. [Online Serial]. Available: Hubungan Stres Dengan Kualitas Tidur Pada Mahasiswa Tingkat Akhir | Ratnaningtyas | Edu Masda Journal. [Accessed Mar. 22, 2020].
+* M. L. Rizzo, “Statistical Computing with R, Second Edition.” CRC Press, February, 2019. [Book]. Available: Statistical Computing with R, Second Edition - Maria L. Rizzo - Google Books. [Accessed Mar. 22, 2020].
+
+
+
+# Lampiran
+
+## Kuesioner
+
+Daftar Pertanyaan Kuesioner:
+
+* Seberapa sering anda mengalami gangguan tidur selama satu semester ?
+* Berapa lama anda tidur setiap harinya ?
+* Berapa skala IPK anda dalam perkuliahan ?
+* Berapa kali anda telat masuk kelas dalam satu semester ?
+* Seberapa sering anda mengantuk ketika kelas dalam satu semester, sehingga mengganggu konsentrasi belajar anda ?
+* Menurut anda, apakah tidur itu penting agar anda bisa menjalankan keseharian anda ?
+* Kisaran pukul berapa anda tidur setiap harinya ?
+* Berapa kali anda terserang penyakit dalam satu semester ?
+
+Link Google Form:
+https://forms.gle/hgXEitg9HGGKfLrv8
+
+## Data
+
+```{r,echo=FALSE}
+library(readxl)
+library(dplyr)
+library(ggplot2)
+
+IS240D_00000051428_KellyMae <- read_excel("Dataset.xlsx")
+str(IS240D_00000051428_KellyMae_D1_Data) 
+head(IS240D_00000051428_KellyMae_D1_Data)
+tail(IS240D_00000051428_KellyMae_D1_Data)
+
+IS240D_00000051428_KellyMae_D1_Data$Frekuensi_gangguan_tidur <- as.factor(IS240D_00000051428_KellyMae_D1_Data$Frekuensi_gangguan_tidur)
+IS240D_00000051428_KellyMae_D1_Data$Durasi_tidur <- as.factor(IS240D_00000051428_KellyMae_D1_Data$Durasi_tidur)
+IS240D_00000051428_KellyMae_D1_Data$Frekuensi_telat <- as.factor(IS240D_00000051428_KellyMae_D1_Data$Frekuensi_telat)
+IS240D_00000051428_KellyMae_D1_Data$Frekuensi_gangguan_mengantuk <- as.factor(IS240D_00000051428_KellyMae_D1_Data$Frekuensi_gangguan_mengantuk)
+IS240D_00000051428_KellyMae_D1_Data$Pola_pikir_mahasiswa <- as.factor(IS240D_00000051428_KellyMae_D1_Data$Pola_pikir_mahasiswa)
+IS240D_00000051428_KellyMae_D1_Data$Jam_tidur <- as.factor(IS240D_00000051428_KellyMae_D1_Data$Jam_tidur)
+IS240D_00000051428_KellyMae_D1_Data$Frekuensi_terserang_penyakit <- as.factor(IS240D_00000051428_KellyMae_D1_Data$Frekuensi_terserang_penyakit)
+
+na.omit(IS240D_00000051428_KellyMae_D1_Data)
+str(IS240D_00000051428_KellyMae_D1_Data)
+```
+
+## Grafik
+
+### Grafik Hipotesa 1
+
+```{r,echo=FALSE}
+library(ggplot2)
+boxplot(IS240D_00000051428_KellyMae_D1_Data$Skala_ipk~ IS240D_00000051428_KellyMae_D1_Data$Frekuensi_gangguan_tidur, xlab = "Frekuensi Gangguan Tidur " , ylab = "Skala IPK" , horizontal = FALSE , main = "Hubungan antara Gangguan Tidur terhadap Nilai IPK Mahasiswa")
+
+# Kesimpulan: 
+# Perbandingan frekuensi gangguan tidur yang paling mencolok terdapat pada mahasiswa yang mengalami gangguan tidur sebanyak 1-3 kali dan memiliki IPK sebesar 3.6. Sedangkan pada responden yang memiliki IPK sebesar 3.5, tidak ada perbedaan yang mencolok pada mahasiswa yang memiliki gangguan tidur sebanyak 1-3 kali dengan 4-6 kali. 
+```
+  
+### Grafik Hipotesa 2
+
+```{r, echo=FALSE}
+ggplot(IS240D_00000051428_KellyMae_D1_Data, aes(x = Frekuensi_gangguan_tidur, fill = Durasi_tidur)) + ggtitle("Hubungan antara Gangguan Tidur dengan Durasi Tidur Mahasiswa") + geom_bar(stat = "Count", position = position_dodge()) + labs(caption = "Kelly Mae 00000051428", x = "Frekuensi Gangguan Tidur")
+
+# Kesimpulan: 
+# Perbandingan frekuensi gangguan tidur pada responden yang memiliki gangguan tidur sebanyak lebih dari 10 kali, terdapat sebuah kesamaan pada responden yang tidur selama 3-4 jam dan 5-6 jam dan perbedaan yang signifikan. Adapun perbedaan yang signifikan pada mahasiswa yang memiliki gangguan tidur sebanyak 4-6 kali. Sedangkan tidak ada perbedaan yang signifikan pada mahasiswa yang tidak memiliki gangguan tidur. 
+```
+  
+### Grafik Hipotesa 3
+
+```{r,echo=FALSE}
+ggplot(IS240D_00000051428_KellyMae_D1_Data, aes(x = Frekuensi_gangguan_tidur, fill = Frekuensi_telat)) + ggtitle("Hubungan antara Gangguan Tidur dengan Aktivitas Mahasiswa dalam Perkuliahan") + geom_bar(stat = "Count", position = position_dodge()) + labs(caption = "Kelly Mae 00000051428", x = "Frekuensi Gangguan Tidur")
+
+# Kesimpulan: 
+# Perbandingan antara gangguan tidur pada jumlah telat mahasiswa yang paling mencolok terdapat pada mahasiswa yang mengalami gangguan tidur sebanyak 1-3 kali.  Sedangkan, pada mahasiswa yang tidak memiliki gangguan tidur, tidak ada perbedaan yang mencolok pada frekuensi keterlambatan. Dengan kata lain, hal ini menunjukkan bahwa mahasiswa yang tidak memiliki gangguan tidur pernah telat. Selain itu, semua mahasiswa yang mengalami gangguan tidur lebih dari 10 kali pernah telat dalam aktivitas perkuliahan.
+
+ggplot(IS240D_00000051428_KellyMae_D1_Data, aes(x = Frekuensi_gangguan_tidur, fill = Frekuensi_gangguan_mengantuk
+)) + ggtitle("Hubungan antara Gangguan Tidur dengan Aktivitas Mahasiswa dalam Perkuliahan") + geom_bar(stat = "Count", position = position_dodge()) + labs(caption = "Kelly Mae 00000051428", x = "Frekuensi Gangguan Tidur")
+
+# Kesimpulan: 
+# Perbandingan antara frekuensi gangguan mengantuk terhadap gangguan tidur yang paling mencolok adalah mahasiswa mengalami gangguan tidur sebanyak lebih dari 10 kali. Sedangkan pada mahasiswa yang mengalami tidak mengalami gangguan tidur tidak menunjukkan perbedaan yang mencolok pada frekuensi telat. 
+```
+  
+### Grafik Hipotesa 4
+
+```{r, echo=FALSE}
+library(ggplot2)
+ggplot(IS240D_00000051428_KellyMae_D1_Data, aes(x = Frekuensi_gangguan_tidur, fill = Pola_pikir_mahasiswa
+)) + ggtitle("Hubungan antara Gangguan Tidur dengan Pola Pikir Mahasiswa akan Pentingnya Tidur") + geom_bar(stat = "Count", position = position_dodge()) + labs(caption = "Kelly Mae 00000051428", x = "Frekuensi Gangguan Tidur ")
+
+# Kesimpulan: 
+#Perbandingan frekuensi gangguan tidur pada mahasiswa yang menganggap bahwa tidur adalah penting, terdapat perbedaan yang mencolok terdapat pada mahasiswa yang tidak memiliki gangguan tidur dan mahasiswa yang mengalami gangguan tidur sebanyak 7-9 kali. Sedangkan pada mahasiswa yang tidak menganggap tidur adalah penting, tidak ada perbedaan yang mencolok. 
+```
+  
+### Grafik Hipotesa 5
+
+```{r,echo=FALSE}
+ggplot(IS240D_00000051428_KellyMae_D1_Data, aes(x = Frekuensi_gangguan_tidur, fill = Jam_tidur)) + ggtitle("Hubungan antara Gangguan Tidur Mahasiswa terhadap Jam Tidur") + geom_bar(stat = "Count", position = position_dodge()) + labs(caption = "Kelly Mae 00000051428", x = "Frekuensi Gangguan Tidur")
+
+# Kesimpulan: 
+# Perbandingan frekuensi gangguan tidur pada mahasiswa yang tidur di atas jam 23.59 lebih besar daripada frekuensi gangguan tidur pada mahasiswa yang tidur antara jam 23.00-23.59. 
+```
+  
+### Grafik Hipotesa 6
+
+```{r,echo=FALSE}
+library(ggplot2)
+ggplot(IS240D_00000051428_KellyMae_D1_Data, aes(x = Frekuensi_gangguan_tidur, fill = Frekuensi_terserang_penyakit
+)) + ggtitle("Hubungan antara Gangguan Tidur dengan Frekuensi Mahasiswa Terserang Penyakit") + geom_bar(stat = "Count", position = position_dodge()) + labs(caption = "Kelly Mae 00000051428", x = "Frekuensi Gangguan Tidur")
+
+# Kesimpulan: 
+# Perbandingan frekuensi gangguan tidur pada mahasiswa yang terserang penyakit sebanyak 1-3 kali lebih besar daripada frekuensi gangguan tidur pada mahasiswa yang tidak pernah terserang penyakit.
+```
+
+
+
